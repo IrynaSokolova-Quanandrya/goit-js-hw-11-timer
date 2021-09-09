@@ -13,7 +13,7 @@ class CountdownTimer {
     this.selector = selector;
     this. targetDate = targetDate;
     this.timerId = null;
-    
+    // this.start();
   }
 
 
@@ -49,6 +49,7 @@ updateCountdown({days, hours, mins, secs}){
   refs.hours.textContent = `${hours}` < 10 ? '0' + `${hours}` : `${hours}`;
   refs.mins.textContent = `${mins}` <10 ? '0' + `${mins}` : `${mins}`;
   refs.secs.textContent = `${secs}` < 10 ? '0' + `${secs}` :`${secs}`;
+ 
 }
  
 
@@ -59,7 +60,5 @@ const countdownTimer = new CountdownTimer({
     targetDate:new Date('Nov 20, 2021'),
   });
 
-
- 
-
+  console.log(updateCountdown);
 
