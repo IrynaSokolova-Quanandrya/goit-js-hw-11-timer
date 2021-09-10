@@ -1,7 +1,4 @@
-
-
-class CountdownTimer {
-  refs = {
+const refs = {
   clock: document.getElementById('timer-1'),
   days: document.querySelector('[data-value="days"]'),
   hours: document.querySelector('[data-value="hours"]'),
@@ -9,12 +6,12 @@ class CountdownTimer {
   secs: document.querySelector('[data-value="secs"]'),
 };
 
-  constructor({selector, targetDate}={}){
+class CountdownTimer {
+   constructor({selector, targetDate}={}){
     this.selector = selector;
     this. targetDate = targetDate;
     this.timerId = null;
-    // this.start();
-  }
+     }
 
 
   // вычисляю разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
@@ -60,5 +57,7 @@ const countdownTimer = new CountdownTimer({
     targetDate:new Date('Nov 20, 2021'),
   });
 
-  console.log(updateCountdown);
+  console.log(countdownTimer);
+  countdownTimer.start();
+
 
