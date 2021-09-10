@@ -55,7 +55,7 @@ updateCountdown({days, hours, mins, secs}){
 
 const countdownTimer = new CountdownTimer({
   selector: '#timer-1',
-  targetDate:new Date('Nov 20, 2021'),
+  targetDate:new Date('Nov 26, 2021'),
 });
 
 
